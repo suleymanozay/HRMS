@@ -1,8 +1,8 @@
 package com.hrms.utils;
 
 public class Constants {
-	public static final String HRMS_URL="http://166.62.36.207/humanresources/symfony/web/index.php/auth/login";
-	public static final String BROWSER="chrome";
+	//public static final String HRMS_URL="http://166.62.36.207/Syntax_HRM/symfony/web/index.php/auth/login";
+	//public static final String BROWSER="chrome";
 	
 	//specify path to chrome and gecko driver
 	
@@ -15,6 +15,9 @@ public class Constants {
 	public static final int IMPLICIT_LOAD_TIME=10;
 	
 	public static final int EXPLICIT_LOAD_TIME=30;
+	
+	public static final String CREDENTIALS_FILEPATH=System.getProperty("user.dir")
+			+"/src/test/resources/configs/Configuration.properties";
 
 
 

@@ -1,4 +1,4 @@
-package com.pratice;
+package com.practice;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
