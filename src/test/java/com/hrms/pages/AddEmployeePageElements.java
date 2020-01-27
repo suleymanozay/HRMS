@@ -25,6 +25,25 @@ public class AddEmployeePageElements {
 	@FindBy (id = "profile-pic")
 	public WebElement profilDetailsName;
 	
+	@FindBy (id = "chkLogin")
+	public WebElement chkLogin;
+	
+	@FindBy (id = "user_name")
+	public WebElement userName;
+	
+	@FindBy (id = "user_password")
+	public WebElement userPassword;
+	
+	@FindBy (id = "re_password")
+	public WebElement confirmPassword;
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

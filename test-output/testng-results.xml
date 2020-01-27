@@ -1,65 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="11" ignored="8" total="23" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24981" started-at="2020-01-21T20:29:09 EST" finished-at="2020-01-21T20:29:34 EST">
+  <suite name="Regression Suite" duration-ms="365772" started-at="2020-01-25T13:44:35 EST" finished-at="2020-01-25T13:50:41 EST">
     <groups>
       <group name="regression">
-        <method signature="S5_US16767.addEmployeVerification()[pri:0, instance:com.hrms.testcases.S5_US16767@cd2dae5]" name="addEmployeVerification" class="com.hrms.testcases.S5_US16767"/>
+        <method signature="AddEmployeeFromXl.addEmployee(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="addEmployee" class="com.hrms.testcases.AddEmployeeFromXl"/>
+        <method signature="LeaveListPageTest.leaveLabelValidation()[pri:0, instance:com.hrms.testcases.LeaveListPageTest@4d41cee]" name="leaveLabelValidation" class="com.hrms.testcases.LeaveListPageTest"/>
+        <method signature="LoginPageTest.emptyPassword()[pri:0, instance:com.hrms.testcases.LoginPageTest@3712b94]" name="emptyPassword" class="com.hrms.testcases.LoginPageTest"/>
+        <method signature="LoginPageTest.logoDisplayed()[pri:0, instance:com.hrms.testcases.LoginPageTest@3712b94]" name="logoDisplayed" class="com.hrms.testcases.LoginPageTest"/>
+        <method signature="LoginPageTest.negativeLogin()[pri:0, instance:com.hrms.testcases.LoginPageTest@3712b94]" name="negativeLogin" class="com.hrms.testcases.LoginPageTest"/>
+        <method signature="S5_US16767.addEmployeVerification()[pri:0, instance:com.hrms.testcases.S5_US16767@2833cc44]" name="addEmployeVerification" class="com.hrms.testcases.S5_US16767"/>
       </group> <!-- regression -->
     </groups>
-    <test name="Default test" duration-ms="24981" started-at="2020-01-21T20:29:09 EST" finished-at="2020-01-21T20:29:34 EST">
-      <class name="com.hrms.testcases.S5_US16767">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.S5_US16767@cd2dae5]" name="setUp" is-config="true" duration-ms="7331" started-at="2020-01-21T20:29:09 EST" finished-at="2020-01-21T20:29:16 EST">
+    <test name=" Regression Test" duration-ms="365772" started-at="2020-01-25T13:44:35 EST" finished-at="2020-01-25T13:50:41 EST">
+      <class name="com.hrms.testcases.AddEmployeeFromXl">
+        <test-method status="PASS" signature="generateReports()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="generateReports" is-config="true" duration-ms="126" started-at="2020-01-25T13:44:35 EST" finished-at="2020-01-25T13:44:35 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReports -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="setUp" is-config="true" duration-ms="10759" started-at="2020-01-25T13:44:36 EST" finished-at="2020-01-25T13:44:46 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="addEmployeVerification()[pri:0, instance:com.hrms.testcases.S5_US16767@cd2dae5]" name="addEmployeVerification" duration-ms="16772" started-at="2020-01-21T20:29:16 EST" finished-at="2020-01-21T20:29:33 EST">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method status="FAIL" signature="addEmployee(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="addEmployee" duration-ms="8846" started-at="2020-01-25T13:44:46 EST" data-provider="getEmployee" finished-at="2020-01-25T13:44:55 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Nick ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Mason]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[NickMason]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[NickMason@123!NickMason]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Failed to convert data to an object
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-ODFPRUL', ip: '192.168.0.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 71.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20191202093317, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12620, moz:profile: C:\Users\salamon\AppData\Lo..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6dba3679-7048-4290-9352-464a2599a121
-*** Element info: {Using=link text, value=Add Employee}]]>
+              <![CDATA[Employee is not added expected [Nick  jr Mason] but found [Nick jr Mason]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Failed to convert data to an object
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-ODFPRUL', ip: '192.168.0.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 71.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20191202093317, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12620, moz:profile: C:\Users\salamon\AppData\Lo..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6dba3679-7048-4290-9352-464a2599a121
-*** Element info: {Using=link text, value=Add Employee}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)
-at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy9.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-at com.hrms.utils.CommonMethods.waitForClickability(CommonMethods.java:223)
-at com.hrms.utils.CommonMethods.click(CommonMethods.java:244)
-at com.hrms.testcases.S5_US16767.addEmployeVerification(S5_US16767.java:20)
+              <![CDATA[java.lang.AssertionError: Employee is not added expected [Nick  jr Mason] but found [Nick jr Mason]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at com.hrms.testcases.AddEmployeeFromXl.addEmployee(AddEmployeeFromXl.java:41)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -90,51 +92,63 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addEmployeVerification -->
-        <test-method status="FAIL" signature="tearDown()[pri:0, instance:com.hrms.testcases.S5_US16767@cd2dae5]" name="tearDown" is-config="true" duration-ms="836" started-at="2020-01-21T20:29:33 EST" finished-at="2020-01-21T20:29:34 EST">
-          <exception class="org.openqa.selenium.WebDriverException">
+        </test-method> <!-- addEmployee -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="tearDown" is-config="true" duration-ms="587" started-at="2020-01-25T13:44:56 EST" finished-at="2020-01-25T13:44:56 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="setUp" is-config="true" duration-ms="10211" started-at="2020-01-25T13:44:56 EST" finished-at="2020-01-25T13:45:06 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="addEmployee(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="addEmployee" duration-ms="9177" started-at="2020-01-25T13:45:06 EST" data-provider="getEmployee" finished-at="2020-01-25T13:45:16 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Roger ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Waters]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[RogerWaters]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[RogerWaters@123RogerWaters]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Failed to decode response from marionette
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-ODFPRUL', ip: '192.168.0.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 71.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20191202093317, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12620, moz:profile: C:\Users\salamon\AppData\Lo..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6dba3679-7048-4290-9352-464a2599a121]]>
+              <![CDATA[Employee is not added expected [Roger  jr Waters] but found [Roger jr Waters]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Failed to decode response from marionette
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-ODFPRUL', ip: '192.168.0.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 71.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20191202093317, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12620, moz:profile: C:\Users\salamon\AppData\Lo..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6dba3679-7048-4290-9352-464a2599a121
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:452)
-at com.hrms.testbase.BaseClass.tearDown(BaseClass.java:43)
+              <![CDATA[java.lang.AssertionError: Employee is not added expected [Roger  jr Waters] but found [Roger jr Waters]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at com.hrms.testcases.AddEmployeeFromXl.addEmployee(AddEmployeeFromXl.java:41)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
-at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
-at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:658)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:642)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
 at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
 at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
@@ -159,11 +173,869 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployee -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="tearDown" is-config="true" duration-ms="596" started-at="2020-01-25T13:45:16 EST" finished-at="2020-01-25T13:45:17 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="setUp" is-config="true" duration-ms="11762" started-at="2020-01-25T13:45:17 EST" finished-at="2020-01-25T13:45:28 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="addEmployee(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="addEmployee" duration-ms="9693" started-at="2020-01-25T13:45:28 EST" data-provider="getEmployee" finished-at="2020-01-25T13:45:38 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Richard ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Wright]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[RichardWright]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[RichardWright@123RichardWrigh]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Employee is not added expected [Richard  jr Wright] but found [Richard jr Wright]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Employee is not added expected [Richard  jr Wright] but found [Richard jr Wright]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at com.hrms.testcases.AddEmployeeFromXl.addEmployee(AddEmployeeFromXl.java:41)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployee -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="tearDown" is-config="true" duration-ms="587" started-at="2020-01-25T13:45:38 EST" finished-at="2020-01-25T13:45:39 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="setUp" is-config="true" duration-ms="10769" started-at="2020-01-25T13:45:39 EST" finished-at="2020-01-25T13:45:50 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="addEmployee(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="addEmployee" duration-ms="8704" started-at="2020-01-25T13:45:50 EST" data-provider="getEmployee" finished-at="2020-01-25T13:45:59 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Syd ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Barrett]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[SydBarrett]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SydBarrett@123SydBarrett]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Employee is not added expected [Syd  jr Barrett] but found [Syd jr Barrett]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Employee is not added expected [Syd  jr Barrett] but found [Syd jr Barrett]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at com.hrms.testcases.AddEmployeeFromXl.addEmployee(AddEmployeeFromXl.java:41)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployee -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="tearDown" is-config="true" duration-ms="586" started-at="2020-01-25T13:45:59 EST" finished-at="2020-01-25T13:45:59 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="setUp" is-config="true" duration-ms="10328" started-at="2020-01-25T13:45:59 EST" finished-at="2020-01-25T13:46:10 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="addEmployee(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="addEmployee" duration-ms="46623" started-at="2020-01-25T13:46:10 EST" data-provider="getEmployee" finished-at="2020-01-25T13:46:56 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[David ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Gilmour]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[DavidGilmour]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[DavidGilmour@123DavidGilmour]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: firstName' (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: firstName' (tried for 30 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.hrms.utils.CommonMethods.waitForVisibility(CommonMethods.java:252)
+at com.hrms.utils.CommonMethods.sendText(CommonMethods.java:228)
+at com.hrms.testcases.AddEmployeeFromXl.addEmployee(AddEmployeeFromXl.java:29)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#firstName"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-ODFPRUL', ip: '192.168.0.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\salamon\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:51364}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 00b45a3137079d3eb06dea85b4ef2fcb
+*** Element info: {Using=id, value=firstName}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy12.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 31 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployee -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="tearDown" is-config="true" duration-ms="583" started-at="2020-01-25T13:46:57 EST" finished-at="2020-01-25T13:46:57 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="setUp" is-config="true" duration-ms="10565" started-at="2020-01-25T13:46:57 EST" finished-at="2020-01-25T13:47:08 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="addEmployee(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="addEmployee" duration-ms="9455" started-at="2020-01-25T13:47:08 EST" data-provider="getEmployee" finished-at="2020-01-25T13:47:17 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Geddy ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Lee]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[GeddyLee]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[GeddyLee@123GeddyLee]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Employee is not added expected [Geddy  jr Lee] but found [Geddy jr Lee]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Employee is not added expected [Geddy  jr Lee] but found [Geddy jr Lee]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at com.hrms.testcases.AddEmployeeFromXl.addEmployee(AddEmployeeFromXl.java:41)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployee -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="tearDown" is-config="true" duration-ms="587" started-at="2020-01-25T13:47:18 EST" finished-at="2020-01-25T13:47:18 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="setUp" is-config="true" duration-ms="12348" started-at="2020-01-25T13:47:18 EST" finished-at="2020-01-25T13:47:31 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="addEmployee(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="addEmployee" duration-ms="43987" started-at="2020-01-25T13:47:31 EST" data-provider="getEmployee" finished-at="2020-01-25T13:48:15 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Alex ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Lifeson]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[AlexLifeson]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[AlexLifeson@123AlexLifeson]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.linkText: Add Employee' (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.linkText: Add Employee' (tried for 30 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.hrms.utils.CommonMethods.waitForClickability(CommonMethods.java:245)
+at com.hrms.testcases.AddEmployeeFromXl.addEmployee(AddEmployeeFromXl.java:23)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Add Employee"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-ODFPRUL', ip: '192.168.0.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\salamon\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:51432}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b95bf5e7ff08a66f8e0befeae23fddfe
+*** Element info: {Using=link text, value=Add Employee}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)
+at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy12.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 30 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployee -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="tearDown" is-config="true" duration-ms="593" started-at="2020-01-25T13:48:15 EST" finished-at="2020-01-25T13:48:16 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="setUp" is-config="true" duration-ms="10196" started-at="2020-01-25T13:48:16 EST" finished-at="2020-01-25T13:48:26 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="addEmployee(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="addEmployee" duration-ms="11336" started-at="2020-01-25T13:48:26 EST" data-provider="getEmployee" finished-at="2020-01-25T13:48:37 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Neil ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Peart]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[NeilPeart]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[NeilPeart@123NeilPeart]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Employee is not added expected [Neil  jr Peart] but found [Neil jr Peart]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Employee is not added expected [Neil  jr Peart] but found [Neil jr Peart]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at com.hrms.testcases.AddEmployeeFromXl.addEmployee(AddEmployeeFromXl.java:41)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployee -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="tearDown" is-config="true" duration-ms="596" started-at="2020-01-25T13:48:38 EST" finished-at="2020-01-25T13:48:38 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="setUp" is-config="true" duration-ms="10216" started-at="2020-01-25T13:48:38 EST" finished-at="2020-01-25T13:48:48 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="addEmployee(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="addEmployee" duration-ms="8809" started-at="2020-01-25T13:48:48 EST" data-provider="getEmployee" finished-at="2020-01-25T13:48:57 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[John ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Rutsey]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[JohnRutsey]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[JohnRutsey@123JohnRutsey]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Employee is not added expected [John  jr Rutsey] but found [John jr Rutsey]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Employee is not added expected [John  jr Rutsey] but found [John jr Rutsey]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at com.hrms.testcases.AddEmployeeFromXl.addEmployee(AddEmployeeFromXl.java:41)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployee -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="tearDown" is-config="true" duration-ms="591" started-at="2020-01-25T13:48:58 EST" finished-at="2020-01-25T13:48:58 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="setUp" is-config="true" duration-ms="10257" started-at="2020-01-25T13:48:58 EST" finished-at="2020-01-25T13:49:08 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="addEmployee(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="addEmployee" duration-ms="14897" started-at="2020-01-25T13:49:08 EST" data-provider="getEmployee" finished-at="2020-01-25T13:49:23 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[James ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hetfield]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[JamesHetfield]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[JamesHetfield@123JamesHetfield]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Employee is not added expected [James  jr Hetfield] but found [James jr Hetfield]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Employee is not added expected [James  jr Hetfield] but found [James jr Hetfield]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at com.hrms.testcases.AddEmployeeFromXl.addEmployee(AddEmployeeFromXl.java:41)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployee -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="tearDown" is-config="true" duration-ms="585" started-at="2020-01-25T13:49:24 EST" finished-at="2020-01-25T13:49:24 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="writeReport()[pri:0, instance:com.hrms.testcases.AddEmployeeFromXl@53f65459]" name="writeReport" is-config="true" duration-ms="225" started-at="2020-01-25T13:50:41 EST" finished-at="2020-01-25T13:50:41 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- writeReport -->
+      </class> <!-- com.hrms.testcases.AddEmployeeFromXl -->
+      <class name="com.hrms.testcases.S5_US16767">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.S5_US16767@2833cc44]" name="setUp" is-config="true" duration-ms="10097" started-at="2020-01-25T13:50:24 EST" finished-at="2020-01-25T13:50:34 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="addEmployeVerification()[pri:0, instance:com.hrms.testcases.S5_US16767@2833cc44]" name="addEmployeVerification" duration-ms="5233" started-at="2020-01-25T13:50:34 EST" finished-at="2020-01-25T13:50:40 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployeVerification -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.S5_US16767@2833cc44]" name="tearDown" is-config="true" duration-ms="596" started-at="2020-01-25T13:50:40 EST" finished-at="2020-01-25T13:50:41 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.hrms.testcases.S5_US16767 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.hrms.testcases.LeaveListPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.LeaveListPageTest@4d41cee]" name="setUp" is-config="true" duration-ms="10720" started-at="2020-01-25T13:49:24 EST" finished-at="2020-01-25T13:49:35 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="leaveLabelValidation()[pri:0, instance:com.hrms.testcases.LeaveListPageTest@4d41cee]" name="leaveLabelValidation" duration-ms="12344" started-at="2020-01-25T13:49:35 EST" finished-at="2020-01-25T13:49:47 EST">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"a.toggle.tiptip"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-ODFPRUL', ip: '192.168.0.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\salamon\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:51580}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4d0682cd544f67a063090c3148105745
+*** Element info: {Using=css selector, value=a.toggle.tiptip}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"a.toggle.tiptip"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-ODFPRUL', ip: '192.168.0.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\salamon\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:51580}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4d0682cd544f67a063090c3148105745
+*** Element info: {Using=css selector, value=a.toggle.tiptip}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy12.isDisplayed(Unknown Source)
+at com.hrms.testcases.LeaveListPageTest.leaveLabelValidation(LeaveListPageTest.java:25)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- leaveLabelValidation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.LeaveListPageTest@4d41cee]" name="tearDown" is-config="true" duration-ms="582" started-at="2020-01-25T13:49:48 EST" finished-at="2020-01-25T13:49:48 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.hrms.testcases.LeaveListPageTest -->
+      <class name="com.hrms.testcases.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.LoginPageTest@3712b94]" name="setUp" is-config="true" duration-ms="12578" started-at="2020-01-25T13:49:48 EST" finished-at="2020-01-25T13:50:01 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="emptyPassword()[pri:0, instance:com.hrms.testcases.LoginPageTest@3712b94]" name="emptyPassword" duration-ms="212" started-at="2020-01-25T13:50:01 EST" finished-at="2020-01-25T13:50:01 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyPassword -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.LoginPageTest@3712b94]" name="tearDown" is-config="true" duration-ms="582" started-at="2020-01-25T13:50:01 EST" finished-at="2020-01-25T13:50:02 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.LoginPageTest@3712b94]" name="setUp" is-config="true" duration-ms="10066" started-at="2020-01-25T13:50:02 EST" finished-at="2020-01-25T13:50:12 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="logoDisplayed()[pri:0, instance:com.hrms.testcases.LoginPageTest@3712b94]" name="logoDisplayed" duration-ms="63" started-at="2020-01-25T13:50:12 EST" finished-at="2020-01-25T13:50:12 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoDisplayed -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.LoginPageTest@3712b94]" name="tearDown" is-config="true" duration-ms="577" started-at="2020-01-25T13:50:12 EST" finished-at="2020-01-25T13:50:13 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.LoginPageTest@3712b94]" name="setUp" is-config="true" duration-ms="10203" started-at="2020-01-25T13:50:13 EST" finished-at="2020-01-25T13:50:23 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="negativeLogin()[pri:0, instance:com.hrms.testcases.LoginPageTest@3712b94]" name="negativeLogin" duration-ms="223" started-at="2020-01-25T13:50:23 EST" finished-at="2020-01-25T13:50:23 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.LoginPageTest@3712b94]" name="tearDown" is-config="true" duration-ms="583" started-at="2020-01-25T13:50:24 EST" finished-at="2020-01-25T13:50:24 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.hrms.testcases.LoginPageTest -->
+    </test> <!--  Regression Test -->
+  </suite> <!-- Regression Suite -->
 </testng-results>

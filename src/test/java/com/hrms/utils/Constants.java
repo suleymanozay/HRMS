@@ -18,8 +18,16 @@ public class Constants {
 	
 	public static final String CREDENTIALS_FILEPATH=System.getProperty("user.dir")
 			+"/src/test/resources/configs/Configuration.properties";
+	
+	public static final String XL_DATA_FILEPATH=System.getProperty("user.dir")+"/src/test/resources/testdata/HRMSTestData.xlsx";
 
-
+	public static final String REPORT_FILEPATH=System.getProperty("user.dir")+"/target/report/Hrms.html";
+	
+	public static final String OS_NAME=System.getProperty("os.name");
+	
+	public static final String USER_NAME=System.getProperty("user.name");
+	
+	public static final String SCREENSHOTS_FILEPATH=System.getProperty("user.dir")+"/target/screenshots/";
 
 }
 

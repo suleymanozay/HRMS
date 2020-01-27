@@ -14,12 +14,14 @@ public class LeaveListPageTest extends CommonMethods{
 		LoginPageElements login=new LoginPageElements();
 		DashboarPageElements dashboard=new DashboarPageElements();
 		LeaveListPageElements leaveList=new LeaveListPageElements();
-		
+		test.info("Loggin into the application");
 		sendText(login.userName, "Admin");
 		sendText(login.password, "Syntax@123");
 		click(login.loginBtn);
+		test.info("Navigating to the Leave List");
 		click(dashboard.leaveLnk);
 		click(dashboard.leaveListLnk);
+		test.info("Validating Leave List Label");
 		Assert.assertTrue(leaveList.leaveListLbl.isDisplayed(), "Label is not displayed");
 			
 	}

@@ -22,7 +22,7 @@ public class S5_US16767 extends CommonMethods{
 		sendText(addEmployee.middleName, "and");
 		sendText(addEmployee.lastName, "Roses");
 		click(addEmployee.saveBtn);
-		screenShot("addemploye");
+		//takeAScreenshot("addemploye");
 		
 		
 			
